@@ -1,0 +1,19 @@
+{
+  "name": "electron-gcal",
+  "version": "1.0.0",
+  "description": "Electron wrapper for Google Calendar",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "google",
+    "calendar"
+  ],
+  "author": "Mark Stuart",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.2.4"
+  }
+}
