@@ -1,19 +1,24 @@
 {
   "name": "electron-gcal",
-  "version": "1.0.0",
-  "description": "Electron wrapper for Google Calendar",
+  "version": "0.0.1",
+  "productName": "Calendar",
+  "description": "Google Calendar desktop app",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build:linux": "electron-packager . --platform linux --arch x64 --out dist/ --overwrite",
+    "deb": "electron-installer-debian --config package-config/linux.json",
+    "package:deb": "npm run build:linux && npm run deb"
   },
   "keywords": [
     "electron",
-    "google",
     "calendar"
   ],
   "author": "Mark Stuart",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^8.2.4"
+    "electron": "^8.2.4",
+    "electron-installer-debian": "^3.0.0",
+    "electron-packager": "^14.2.1"
   }
 }
