@@ -7,8 +7,11 @@
   "scripts": {
     "start": "electron .",
     "build:linux": "electron-packager . --platform linux --arch x64 --out dist/ --overwrite",
+    "build:osx": "electron-packager . --platform darwin --arch x64 --out dist/ --overwrite",
     "deb": "electron-installer-debian --config package-config/linux.json",
-    "package:deb": "npm run build:linux && npm run deb"
+    "dmg": "electron-installer-dmg ./dist/Calendar-darwin-x64/Calendar.app Calendar --icon icons/gcal-icon-72x72.png --out dist/installers",
+    "package:deb": "npm run build:linux && npm run deb64",
+    "package:dmg": "npm run build:osx && npm run dmg"
   },
   "keywords": [
     "electron",
@@ -19,6 +22,7 @@
   "devDependencies": {
     "electron": "^8.2.4",
     "electron-installer-debian": "^3.0.0",
+    "electron-installer-dmg": "^3.0.0",
     "electron-packager": "^14.2.1"
   }
 }
