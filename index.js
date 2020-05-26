@@ -1,7 +1,7 @@
 const { app, BrowserWindow, shell } = require('electron')
 const path = require('path')
 
-app.name = 'Calendar'
+app.name = 'GCal'
 
 const handleLinkClicks = (webContents) => {
   /**
@@ -40,7 +40,7 @@ const createWindow = () => {
     height: 720,
     title: "Google Calendar",
     titleBarStyle: 'hidden',
-    icon: path.join(__dirname, 'icons/gcal-icon-72x72.png'),
+    icon: path.join(__dirname, 'icons/gcal-icon.png'),
     backgroundColor: '#fff',
   })
 
