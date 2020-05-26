@@ -10,7 +10,7 @@
     "build:osx": "electron-packager . --platform darwin --arch x64 --icon icons/gcal-icon.icns --out dist/ --overwrite",
     "deb": "electron-installer-debian --config package-config/linux.json",
     "dmg": "electron-installer-dmg ./dist/GCal-darwin-x64/GCal.app GCal --icon icons/gcal-icon.icns --out dist/installers",
-    "package:deb": "npm run build:linux && npm run deb64",
+    "package:deb": "npm run build:linux && npm run deb",
     "package:dmg": "npm run build:osx && npm run dmg"
   },
   "keywords": [
