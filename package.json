@@ -1,15 +1,15 @@
 {
   "name": "electron-gcal",
-  "version": "0.0.1",
-  "productName": "Calendar",
+  "version": "0.0.3",
+  "productName": "GCal",
   "description": "Google Calendar desktop app",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build:linux": "electron-packager . --platform linux --arch x64 --out dist/ --overwrite",
-    "build:osx": "electron-packager . --platform darwin --arch x64 --out dist/ --overwrite",
+    "build:linux": "electron-packager . --platform linux --arch x64 --icon icons/gcal-icon.png --out dist/ --overwrite",
+    "build:osx": "electron-packager . --platform darwin --arch x64 --icon icons/gcal-icon.icns --out dist/ --overwrite",
     "deb": "electron-installer-debian --config package-config/linux.json",
-    "dmg": "electron-installer-dmg ./dist/Calendar-darwin-x64/Calendar.app Calendar --icon icons/gcal-icon-72x72.png --out dist/installers",
+    "dmg": "electron-installer-dmg ./dist/GCal-darwin-x64/GCal.app GCal --icon icons/gcal-icon.icns --out dist/installers",
     "package:deb": "npm run build:linux && npm run deb64",
     "package:dmg": "npm run build:osx && npm run dmg"
   },

@@ -1,9 +1,9 @@
 {
     "dest": "dist/installers/",
-    "src": "dist/Calendar-linux-x64/",
-    "bin": "Calendar",
+    "src": "dist/GCal-linux-x64/",
+    "bin": "GCal",
     "arch": "amd64",
-    "icon": "icons/gcal-icon-72x72.png",
+    "icon": "icons/gcal-icon.png",
     "categories": [
       "Office",
       "Calendar"
