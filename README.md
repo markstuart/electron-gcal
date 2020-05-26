@@ -11,7 +11,7 @@ your default browser.
 
 Go to the [releases](https://github.com/markstuart/electron-gcal/releases) page to download the installer for your operating system.
 
-**Caveat**: at this time, only Linux .deb installer is provided. ;)
+**Caveat**: at this time, only Linux .deb and MacOS .dmg installers are provided.
 
 ## Development
 
