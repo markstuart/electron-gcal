@@ -13,7 +13,7 @@ const handleLinkClicks = (webContents) => {
    * on the webContents, and we tell the OS to use the default
    * browser to open the link.
    */
-  webContents.on('dom-ready', function() {
+  webContents.on('dom-ready', () => {
     const script = `
       document.addEventListener('click', event => {
         if (event.target.tagName === 'A') {
@@ -21,16 +21,16 @@ const handleLinkClicks = (webContents) => {
           window.open(event.target.href);
         }
       }, true);
-    `;
-    webContents.executeJavaScript(script, false);
-  });
+    `
+    webContents.executeJavaScript(script, false)
+  })
 
   webContents.on('new-window', (event, url) => {
-    event.preventDefault();
+    event.preventDefault()
     if (url && url !== 'about:blank') {
-      shell.openExternal(url);
+      shell.openExternal(url)
     }
-  });
+  })
 }
 
 const createWindow = () => {
@@ -38,7 +38,7 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 1280,
     height: 720,
-    title: "Google Calendar",
+    title: 'Google Calendar',
     titleBarStyle: 'hidden',
     icon: path.join(__dirname, 'icons/gcal-icon.png'),
     backgroundColor: '#fff',
