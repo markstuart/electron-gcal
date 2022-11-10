@@ -20,7 +20,7 @@
   "author": "Mark Stuart",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^11.5.0",
+    "electron": "^18.3.7",
     "electron-installer-debian": "^3.0.0",
     "electron-installer-dmg": "^3.0.0",
     "electron-packager": "^14.2.1"
